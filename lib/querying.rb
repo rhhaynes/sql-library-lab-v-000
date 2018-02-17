@@ -8,7 +8,7 @@ end
 def select_name_and_motto_of_char_with_longest_motto
   %q{SELECT characters.name, characters.motto
      FROM   characters
-     WHERE  books.series_id = 1 ORDER BY books.year
+     WHERE  characters.motto 
   }
 end
 
