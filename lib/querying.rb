@@ -38,10 +38,10 @@ def select_series_title_with_most_human_characters
 end
 
 def select_character_names_and_number_of_books_they_are_in
-  %q{SELECT characters.name, COUNT(books.name)
-     FROM   characters
-     JOIN   character_books ON character_books.character_id = characters.id
-     JOIN   books           ON books.id = character_books.book_id
-     
+  %q{SELECT   characters.name, COUNT(books.name)
+     FROM     characters
+     JOIN     character_books ON character_books.character_id = characters.id
+     JOIN     books           ON books.id = character_books.book_id
+     GROUP BY characters.name
   }
 end
