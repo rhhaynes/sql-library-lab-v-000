@@ -31,7 +31,7 @@ def select_series_title_with_most_human_characters
   %q{SELECT   series.title
      FROM     series
      JOIN     characters ON characters.series_id = series.id
-     ORDER BY COUNT(*) WHERE character.species = 'human'
+     WHERE character.species = 'human' ORDER BY COUNT(*) DESC LIMIT 1
   }
 end
 
