@@ -17,7 +17,7 @@ CREATE TABLE authors (
 
 CREATE TABLE books (
   id          INTEGER PRIMARY KEY,
-  title       TEXT,
+  title       INTEGER,
   year        TEXT,
   series_id   INTEGER
 );
