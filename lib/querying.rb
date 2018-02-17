@@ -13,9 +13,9 @@ def select_name_and_motto_of_char_with_longest_motto
 end
 
 def select_value_and_count_of_most_prolific_species
-  %q{SELECT   species.name, COUNT(*)
-     FROM     species
-     GROUP BY species.name ORDER BY COUNT(*) DESC LIMIT 1
+  %q{SELECT   characters.species, COUNT(*)
+     FROM     characters
+     GROUP BY characters.species ORDER BY COUNT(*) DESC LIMIT 1
   }
 end
 
